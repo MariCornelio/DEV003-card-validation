@@ -1,14 +1,83 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta de crédito válida</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cantarell&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/de500e559a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="assets/balloon.svg" alt="globo">
+      <p>Dream High</p>
+    </div>
+    <h3 class="titulo">Realizar Compra con TARJETA DE REGALO </h3>
+    <div class="cart-shop">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <p>Volver al carrito de compras</p>
+    </div>
+  </header>
+  <main>
+    <aside class="panel">
+      <div class="loader">
+        <img src="assets/ball-triangle.svg" alt="Loader">
+      </div>
+      <section class="panelWindow">
+      </section>
+    </aside>
+    <div class="globo"><img src="assets/balloon.svg" alt="Globo aerostático"></div>
+    <div class="main-contenedor">
+      <section class="tarjeta">
+        <div class="tarjeta-img">
+          <div class="logo-img">
+            <p>Dream High</p>
+          </div>
+          <article class="datos">
+            <p class="label">Código de Gift Card</p>
+            <p class="numero-tarjeta">0000 0000 0000 0000</p>
+            <p class="nombre">---- ---- ----</p>
+          </article>
+        </div>
+      </section>
+      <section class="formulario">
+        <div class="formulario-container">
+          <div class="regalo">
+            <div class="regalo-img"><img src="assets/form-gift.svg" alt="regalo"></div>
+            <h3>VALIDAR GIFT CARD</h3>
+          </div>
+          <form class="formulario-tarjeta">
+            <label for="input-cliente" class="form-cliente">Nombre de Cliente</label>
+            <input id="input-cliente" name="name" type="text" autocomplete="off"
+              title="Esta sección solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+              required>
+            <label for="input-tarjeta" class="form-tarjeta">Ingrese Número de Gift Card</label>
+            <input id="input-tarjeta" type="text" name="number" minlength="4" maxlength="19" autocomplete="off"
+              title="Está sección solo acepta números y puede contener de 4 a 16 dígitos" pattern="^[\d\s]{4,19}$"
+              required>
+            <button class="form-button" disabled>Validar</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&#169 DREAM HIGH 2022 </p>
+    <div class="footer-redes">
+      <p>SÍGUENOS TAMBIÉN AQUÍ</p>
+      <a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook.svg" alt=""></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.svg" alt=""></a>
+    </div>
+  </footer>
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>

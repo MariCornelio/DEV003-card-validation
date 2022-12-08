@@ -1,0 +1,434 @@
+html {
+  box-sizing: border-box;
+  font-family: "Cantarell", sans-serif;
+  font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Trajanus";
+  src: url("assets/TrajanusBricks.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* estilos para el header */
+.header {
+  height: 4rem;
+  display: flex;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+}
+
+.logo,
+.cart-shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.logo p {
+  font-family: "Trajanus", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+
+.logo img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.2rem;
+}
+
+.cart-shop i {
+  margin-right: 0.3rem;
+  font-size: 2rem;
+
+  color: #bfbdb0;
+}
+
+.cart-shop p {
+  color: #bfbdb0;
+  font-weight: bold;
+}
+
+.cart-shop:hover {
+  border: 0.2rem solid #bfbdb0;
+  cursor: pointer;
+}
+
+.titulo {
+  margin: auto;
+  color: #bfbdb0;
+}
+
+/* estilos para el main */
+main {
+  flex-grow: 1;
+  background-image: url(assets/cielo.webp);
+  background-size: cover;
+  background-position: center -10rem;
+  background-repeat: no-repeat;
+  background-color: #d9a796;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.globo {
+  width: 15%;
+}
+
+.main-contenedor {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  border: thick solid #703f22;
+  border-radius: 2rem;
+  background-color: rgb(191, 189, 176, 0.5);
+
+  margin: 2rem;
+  width: 70%;
+  max-width: 1000px;
+}
+/* estilos para el pie de página */
+.footer {
+  padding: 0.5em;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background-color: #a66851;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-redes {
+  display: flex;
+}
+.footer-redes img {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.2rem 0.5rem;
+}
+
+/* estilos en la imagen tarjeta */
+.tarjeta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tarjeta-img {
+  width: 100%;
+  max-width: 400px;
+  min-height: 250px;
+  border-radius: 20px;
+  background-image: url(assets/gift-card.webp), url(assets/dorado.webp);
+  backdrop-filter: opacity(0);
+  background-position: center, center;
+
+  background-color: #8c5332;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, cover;
+
+  margin: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 0px 45px 18px -23px rgba(0, 0, 0, 0.68);
+}
+
+.logo-img {
+  position: relative;
+  font-family: "Trajanus", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+.logo-img p {
+  color: #fff;
+  position: absolute;
+  top: -1rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+.datos p:last-child {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+  text-shadow: 0 1px 0.5px #fff;
+}
+.datos p:first-child {
+  color: rgb(153, 153, 153, 0.3);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.numero-tarjeta {
+  color: #ddd;
+  margin-top: 0;
+}
+.nombre {
+  text-transform: uppercase;
+}
+
+/* estilos al formulario */
+
+.formulario {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formulario-container {
+  width: 100%;
+  background-color: transparent;
+  margin: 1rem;
+}
+
+.formulario-tarjeta {
+  padding: 2rem;
+  padding-top: 0.5rem;
+}
+.formulario-tarjeta > * {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+.form-cliente,
+.form-tarjeta {
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+}
+.formulario-tarjeta input {
+  border: none;
+  background-color: transparent;
+  border-bottom: medium solid #40120e;
+}
+.formulario-tarjeta input[name="name"] {
+  /* para que se vea en mayusculas pero para javascript es minusculas */
+  text-transform: uppercase;
+}
+
+.formulario-tarjeta input:focus {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-image: linear-gradient(to bottom, transparent, #fff);
+  outline: none;
+}
+
+/* validaciones de color formulario */
+.formulario-tarjeta input:valid {
+  border-top: thin solid #3fbf77;
+}
+.formulario-tarjeta input:invalid {
+  border-top: thin solid #f25749;
+}
+
+/* validaciones de formulario con un span creado en JS */
+.formulario-error {
+  /* para que se junte y es la medida de margin bottom del input */
+  margin-top: -1rem;
+  font-size: 80%;
+  background-color: #f25749;
+  color: #eee;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  transition: all 800ms ease;
+}
+
+.formulario-error.is-active {
+  display: block;
+  animation: mensaje 1s 1 normal 0s ease-out both;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes mensaje {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* estilos al boton de formulario */
+.form-button {
+  position: relative;
+  border: thin solid #fff;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  margin: auto;
+  width: 60%;
+  height: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f2b694;
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease;
+}
+
+.form-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0.25rem;
+  background-color: #f37272;
+  border-radius: 1rem;
+  transition: width 0.5s ease, left 0.5s ease;
+}
+.form-button:hover {
+  transform: scale(1.1);
+}
+.form-button:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/* estilos al boton en modo disabled */
+.form-button:disabled {
+  transform: scale(1);
+  cursor: auto;
+}
+.form-button:disabled::after {
+  content: "";
+  width: 0;
+}
+
+/* estilos al regalito y al titulo del formualrio */
+.regalo > * {
+  display: inline-block;
+  margin: 0;
+}
+
+.regalo-img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+}
+@keyframes sacudir {
+  10%,
+  90% {
+    transform: translate(0, -1px);
+  }
+
+  20%,
+  80% {
+    transform: translate(0, 2px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate(0, -5px);
+  }
+  40%,
+  60% {
+    transform: translate(0, 5px);
+  }
+}
+
+.formulario-container:hover > * .regalo-img {
+  animation: sacudir 1s ease-in-out 2;
+}
+
+/* estilos al panel una vez hecho click en validar 
+1- al panel con opacidad*/
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background-color: rgb(34, 34, 34, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+/* 2- Estilos a la pequeña ventana */
+
+.panelWindow {
+  padding: 0 2rem;
+  display: flex;
+  background-color: #ddd;
+  box-shadow: 2px 2px 24px 11px rgba(0, 0, 0, 0.75);
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.panelWindow * {
+  padding: 1rem;
+  margin: auto;
+}
+
+.panelWindow hr {
+  padding: 0.1rem;
+  background-color: #f37272;
+}
+
+.panel button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f2b694;
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.15);
+  border: thin solid #fff;
+
+  margin-bottom: 0.5rem;
+}
+
+.panel.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+/* ***Estilos al icono*** */
+/* 1-valido */
+.fa-square-check {
+  color: #3fbf77;
+  font-size: 2rem;
+}
+
+/* 2-invalido */
+.fa-square-xmark {
+  color: #f23322;
+  font-size: 2rem;
+}
