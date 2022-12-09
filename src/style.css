@@ -34,11 +34,13 @@ img {
 
 /* estilos para el header */
 .header {
+  position: relative;
   height: 4rem;
   display: flex;
   background-color: #222;
   color: #fff;
   text-align: center;
+  z-index: 20;
 }
 
 .logo,
@@ -97,7 +99,31 @@ main {
 }
 
 .globo {
-  width: 15%;
+  width: 10%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.4;
+  animation: fly 30s linear infinite alternate both;
+}
+@keyframes fly {
+  0% {
+    transform: translate(0, -7vh);
+    opacity: 0.3;
+  }
+  30% {
+    transform: translate(0, -100vh);
+    opacity: 0.1;
+    /* transform: translate(0, -40vh); */
+  }
+  60% {
+    opacity: 0.1;
+    transform: translate(90vw, -100vh);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translate(90vw, -7vh);
+  }
 }
 
 .main-contenedor {
@@ -115,6 +141,8 @@ main {
 }
 /* estilos para el pie de página */
 .footer {
+  position: relative;
+  z-index: 20;
   padding: 0.5em;
   font-size: 0.8rem;
   font-weight: bold;
