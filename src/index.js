@@ -117,10 +117,6 @@ document.addEventListener("click", (e) => {
   }
 
   if (e.target.matches(".panelWindow button")) {
-    if (validator.isValid(crediCardNumber)) {
-      location.reload();
-    } else {
-      location.reload();
-    }
+    location.reload();
   }
 });
