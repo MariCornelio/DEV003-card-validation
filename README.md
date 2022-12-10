@@ -1,10 +1,14 @@
-# Validar Gift Card
+# Validar Gift Card 🎁
 
-Este proyecto es una interfaz para validar una Gift Card de una empresa llamada **DREAM HIGH** la cual tiene como objetivo relizar ventas por internet.
+Este proyecto es una interfaz para validar la Gift Card de un usuario para la empresa llamada **DREAM HIGH** la cual tiene como objetivo relizar ventas por internet.
 
-Esta sección solamente está enfocada para los usuarios que quieren hacer la compra a travez de su Gift Card y necesitan colocar sus datos y validar la tarjeta.
+Esta sección solamente está enfocada para los usuarios que quieren hacer la compra a través de su Gift Card y necesitan colocar sus datos y validar la tarjeta.
 
 Esta interfaz permitirá que al ingresar los datos se muestre en tiempo real el llenado de datos en una tarjeta visual, además permitirá ocultar todos los dígitos del número de la tarjeta a excepción de los últimos cuatro dígitos y para la validación de la tarjeta se uso el **_algoritmo de Luhn_**.
+
+Puedes ver la interfaz del sitio web en el siguiente enlace:
+
+👉 **[DREAM HIGH > Validar Gift card](https://maricornelio.github.io/DEV003-card-validation/)**
 
 ---
 
@@ -42,7 +46,7 @@ par se les debe multiplicar por dos, si este número es mayor o igual a 10,
 debemos sumar los dígitos del resultado; el número a verificar será válido si
 la suma de sus dígitos finales es un múltiplo de 10.
 
-![gráfica de algoritmo de Luhn](https://camo.githubusercontent.com/384aaf65ea2fcf88d1d5f7a934c68e382d0a6323fdbdaad242e63c9798a83d31/68747470733a2f2f692e696d6775722e636f6d2f4a6167436531512e706e67)
+<img src="https://camo.githubusercontent.com/384aaf65ea2fcf88d1d5f7a934c68e382d0a6323fdbdaad242e63c9798a83d31/68747470733a2f2f692e696d6775722e636f6d2f4a6167436531512e706e67" width= "350" height="400">
 
 Por lo tanto con este algoritmo veremos si el número de la Gift Card es válida o no.
 
@@ -140,5 +144,9 @@ En este proyecto se ha usado los fundamentos de JavaScript, incluyendo conceptos
 ---
 
 ## Resultado Final
+
+Puedes ver la interfaz del sitio web en el siguiente enlace:
+
+👉 **[DREAM HIGH > Validar Gift card](https://maricornelio.github.io/DEV003-card-validation/)**
 
 ![validar tarjeta](src/assets/portada.png)
